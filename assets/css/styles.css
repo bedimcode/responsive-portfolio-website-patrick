@@ -65,6 +65,7 @@
 
 /*=============== BASE ===============*/
 * {
+  /* border-sizing allows wheather to include the padding in the content-width or not, border-box ensures the padding is included in the content width avoid creating extra width space for padding */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -154,13 +155,84 @@ svg {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: var(--container-color);
+  top: 0px;
+  left: 0px;
+  z-index: var(--z-fixed);
 
+}
+
+.nav {
+  height: var(--header-height);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav__logo{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo span{
+  color: var(--first-color);
+}
+
+.nav__toggle, .nav__close{
+  display: flex;
+  font-size: 1.2rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 
 /* Navigation for mobile devices */
+@media screen and (max-width:1023px){
+  .nav__menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 10%, 0.3);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    backdrop-filter: blur(24px);
+    transition: right 0.5s;
+  }  
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color .4s;
+}
+
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+
 
 
 /* Show menu */
-
+.show-menu{
+  right: 0;
+}
 
 /* Add blur to header */
 
