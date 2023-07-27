@@ -384,8 +384,33 @@ svg {
   color: var(--first-color);
 }
 /*=============== SERVICES ===============*/
+.services__container{
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
 
+.service__card{
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--first-color);
+}
+.services__icon{
+  display: block;
+  font-size: 5rem;
+  color: var(--first-color);
+  margin-bottom: 0.8rem;
+}
 
+.services__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.service__card:hover{
+  border-color: var(--container-color);
+}
 /*=============== PROJECTS ===============*/
 
 
