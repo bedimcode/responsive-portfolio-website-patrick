@@ -162,6 +162,7 @@ svg {
   top: 0px;
   left: 0px;
   z-index: var(--z-fixed);
+  /* background-color: transparent; */
 
 }
 
@@ -241,17 +242,147 @@ svg {
 
 
 /*=============== HOME ===============*/
+.home{
+  background-color: var(--container-color);
+}
 
+.home__container{
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
 
+.home__content{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__subtitle, .home__education{
+  font-size: var(--bigger-font-size);
+}
+
+.home__subtitle span, .home__title{
+  color: var(--first-color);
+}
+
+.home__title{
+  font-size: 1.7rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.home__description{
+  margin-block: 1rem 1.5rem;
+}
+
+.home__social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.home__social-link{
+  display: flex;
+  background-color: var(--first-color);
+  padding: 0.5rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  transition: transform 0.2s;
+}
+
+.home__social-link:hover{
+  transform: translateY(-0.5rem);
+}
+
+.home__image{
+  justify-self: center;
+}
+
+.home__blob{
+  width: 20rem;
+  /* background-color: aqua; */
+  fill: var(--first-color);
+}
 /*=============== BUTTON ===============*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow 0.4s;
+}
 
-
+.button:hover{
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 50%, 0.25);
+}
 /*=============== ABOUT ===============*/
+.about__container{
+  row-gap: 2.5rem;
+}
 
+.about__data{
+  text-align: center;
+}
+.about__description{
+  margin-bottom: 2rem;
+}
 
+.about__image{
+  justify-self: center;
+}
+.about__blob{
+  width: 20rem;
+}
+
+.about__blob path{
+  stroke: var(--first-color);
+  /* fill: var(--first-color); */
+}
 /*=============== SKILLS ===============*/
+.skills{
+  background-color: var(--container-color);
+}
 
+.skills__container{
+  row-gap: 3rem;
+  padding-bottom: 2rem;
+}
 
+.skills__data{
+  text-align: center;
+}
+.skills__description{
+  margin-bottom: 2rem;
+}
+
+.skills__content, .skills__group{
+  display: grid;
+}
+
+.skills__content{
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+}
+
+.skills__group{
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+.skills__item{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.skills__item::marker{
+  color: var(--first-color);
+}
 /*=============== SERVICES ===============*/
 
 
